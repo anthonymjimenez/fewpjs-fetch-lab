@@ -1,5 +1,6 @@
 const gameOfThronesURL = "https://anapioficeandfire.com/api/books";
-const fetchBooks = (gameOfThronesURL) =>
+
+const fetchBooks = () =>
   fetch(gameOfThronesURL)
     .then((response) => response.json())
     .then((data) => renderBooks(data));
@@ -14,5 +15,5 @@ function renderBooks(books) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetchBooks();
+  getPosts();
 });
